@@ -1,10 +1,8 @@
-<div class="tab">
-	<div class="business" *ngFor="let task of tasks">
-		<input type="text" [value]="task.text" data-id="task.id">
-		<div class="btn arrow-circle-right"><i class="fa fa-arrow-circle-right"></i></div>
-		<div class="btn arrow-circle-left"><i class="fa fa-arrow-circle-left"></i></div>
-		<div class="btn check"><i class="fa fa-check"></i></div>
-		<div class="btn trash"><i class="fa fa-trash"></i></div>
-		<div class="btn chrome"><i class="fa fa-chrome"></i></div>
-	</div>
+<div class="task" *ngFor="let task of tasks | filterByCategory: activeCategory">
+	<input type="text" [value]="task.text" data-id="task.id">
+	<div *ngIf="task.category === 1" class="btn arrow-circle-right" title="Перенести на завтра" ><i class="fa fa-arrow-circle-right"></i></div>
+	<div *ngIf="task.category === 2" class="btn arrow-circle-left"  title="Перенести на сегодня"><i class="fa fa-arrow-circle-left"></i></div>
+	<div *ngIf="task.category !== 4" class="btn check"   			title="Выполнить"	        ><i class="fa fa-check"></i></div>
+	<div *ngIf="task.category === 3" class="btn chrome"  			title="Искать в гугле"	    ><i class="fa fa-chrome"></i></div>
+	<div *ngIf="task.category === 4" class="btn trash"   			title="Удалить"	  		    ><i class="fa fa-trash"></i></div>
 </div>

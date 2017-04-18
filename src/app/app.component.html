@@ -1,6 +1,6 @@
-<app-nav></app-nav>
+<app-nav (onChangeCategory)="onChangeCategory($event)"></app-nav>
 <div class="wrapper">
-	<app-tasklist></app-tasklist>
-	<div class="btn-plus"><i class="fa fa-plus"></i></div>
+	<app-tasklist [activeCategory]="activeCategory"></app-tasklist>
+	<div class="btn"><i class="fa fa-plus"></i></div>
 </div>
 <div id="infoBox">{{infoBox}}</div>

@@ -1,0 +1,41 @@
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 70px;
+    background: #111;
+    width: 100%;
+    color: #fff;
+}
+nav ul {
+    width: 80vw;
+    margin: 0 auto;
+}
+nav li {
+    list-style: none;
+    display: inline-block;
+    line-height: 70px;
+    padding: 0 30px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+nav li:hover, nav li.active {
+    background: #252525;
+    transition: all 300ms;
+}
+@media only screen and (max-width:480px) {
+    nav {
+        overflow: scroll;
+        width: 100vw;
+        height: 70px;
+    }
+    nav ul{
+        width: 145vw;
+        font-size: 20px;
+    }
+    nav li{
+        line-height: 70px;
+        padding: 0 20px;
+        text-transform: lowercase;
+    }
+}

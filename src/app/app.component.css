@@ -1,0 +1,25 @@
+.wrapper{
+    width: 80vw;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+#infoBox{
+    background: #000;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    padding: 0 1vw;
+}
+
+
+@media only screen and (max-width:480px) {
+    .wrapper, .business{
+        width: 99%;
+    }
+    .wrapper{
+        margin-bottom: 50vh;
+    }
+    #infoBox{
+        font-size: 10px;
+    }
+}

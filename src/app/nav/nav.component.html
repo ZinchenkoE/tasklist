@@ -2,6 +2,7 @@
 	<ul>
 		<li *ngFor="let category of categories"
 			[class.active]="activeCategory == category.id"
+			(click)="clickToCategory(category.id)"
 		>{{category.name}}</li>
 	</ul>
 </nav>

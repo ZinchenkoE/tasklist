@@ -1,25 +1,25 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, Input} from '@angular/core';
 
 @Component({
-  selector: 'app-tasklist',
-  templateUrl: './tasklist.component.html',
-  styleUrls: ['./tasklist.component.css']
+	selector: 'app-tasklist',
+	templateUrl: './tasklist.component.html',
+	styleUrls: ['./tasklist.component.css'],
 })
 export class TasklistComponent implements OnInit {
-  tasks: Task[] = [
-    { id: 1, name: 'Сегодня dfhfg'  , category: 1 },
-    { id: 2, name: 'Завтра fhgh'    , category: 1 },
-    { id: 3, name: 'Заметки fgh '   , category: 1 },
-    { id: 4, name: 'Выполненные fgh', category: 1 },
-  ];
-  constructor() { }
+	@Input() activeCategory: number;
 
-  ngOnInit() {}
+	tasks: Task[] = [
+		{id: 1, text: 'Сегодня dfhfg', category: 1},
+		{id: 2, text: 'Завтра fhgh', category: 1},
+		{id: 3, text: 'Заметки fgh ', category: 2},
+		{id: 4, text: 'Выполненные fgh', category: 2},
+	];
+	constructor() {}
+	ngOnInit() {}
 
 }
-
-class Task {
-  id: number;
-  name: string;
-  category: number;
+export class Task {
+	id: number;
+	text: string;
+	category: number;
 }
