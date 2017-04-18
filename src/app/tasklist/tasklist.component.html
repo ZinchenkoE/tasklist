@@ -1,0 +1,10 @@
+<div class="tab">
+	<div class="business" *ngFor="let task of tasks">
+		<input type="text" [value]="task.text" data-id="task.id">
+		<div class="btn arrow-circle-right"><i class="fa fa-arrow-circle-right"></i></div>
+		<div class="btn arrow-circle-left"><i class="fa fa-arrow-circle-left"></i></div>
+		<div class="btn check"><i class="fa fa-check"></i></div>
+		<div class="btn trash"><i class="fa fa-trash"></i></div>
+		<div class="btn chrome"><i class="fa fa-chrome"></i></div>
+	</div>
+</div>
